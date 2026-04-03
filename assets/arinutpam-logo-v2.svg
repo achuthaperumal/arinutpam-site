@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none">
+  <!-- Concept 2: Precision Monogram — AN sharing a vertical stroke -->
+  <defs>
+    <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Blueprint grid lines (subtle) -->
+  <line x1="5" y1="20" x2="85" y2="20" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+  <line x1="5" y1="78" x2="85" y2="78" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+  <line x1="5" y1="20" x2="5" y2="78" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+  <line x1="85" y1="20" x2="85" y2="78" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- A: left triangle — two legs meeting at top -->
+  <path d="M12,74 L32,24 L52,74" stroke="url(#lg2)" stroke-width="3.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- A crossbar -->
+  <line x1="19" y1="56" x2="45" y2="56" stroke="url(#lg2)" stroke-width="2.5"/>
+
+  <!-- Shared vertical stroke (right leg of A = left leg of N) -->
+  <!-- Already part of the A's right leg going to x=52 -->
+
+  <!-- N: right side — shared left vertical, diagonal, right vertical -->
+  <line x1="52" y1="74" x2="52" y2="24" stroke="url(#lg2)" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="52" y1="24" x2="78" y2="74" stroke="url(#lg2)" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="78" y1="74" x2="78" y2="24" stroke="url(#lg2)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Precision corner marks -->
+  <path d="M8,23 L8,17 L14,17" stroke="#06b6d4" stroke-width="1.2" fill="none" opacity="0.4"/>
+  <path d="M82,23 L82,17 L76,17" stroke="#8b5cf6" stroke-width="1.2" fill="none" opacity="0.4"/>
+  <path d="M8,75 L8,81 L14,81" stroke="#06b6d4" stroke-width="1.2" fill="none" opacity="0.4"/>
+  <path d="M82,75 L82,81 L76,81" stroke="#8b5cf6" stroke-width="1.2" fill="none" opacity="0.4"/>
+
+  <!-- Company name -->
+  <text x="105" y="44" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="32" letter-spacing="0.02em">
+    <tspan fill="#06b6d4">ARI</tspan><tspan fill="#64748b">NUTPAM</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="105" y="68" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="11" letter-spacing="0.25em" fill="#64748b">
+    AI ENGINEERING
+  </text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Logo Mark: Abstract neural "A" inside a hexagonal frame -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer hexagon frame -->
+  <polygon points="50,8 90,24 90,72 50,88 10,72 10,24" stroke="url(#grad1)" stroke-width="2" fill="none"/>
+
+  <!-- Inner triangle "A" shape -->
+  <path d="M50,22 L74,68 H26 Z" stroke="url(#grad1)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+
+  <!-- Crossbar of A -->
+  <line x1="34" y1="52" x2="66" y2="52" stroke="url(#grad1)" stroke-width="2"/>
+
+  <!-- Neural nodes -->
+  <circle cx="50" cy="22" r="3" fill="#06b6d4"/>
+  <circle cx="74" cy="68" r="3" fill="#8b5cf6"/>
+  <circle cx="26" cy="68" r="3" fill="#06b6d4"/>
+  <circle cx="34" cy="52" r="2.5" fill="#22d3ee"/>
+  <circle cx="66" cy="52" r="2.5" fill="#a78bfa"/>
+  <circle cx="50" cy="48" r="2" fill="#06b6d4" opacity="0.7"/>
+
+  <!-- Neural connections (subtle) -->
+  <line x1="50" y1="48" x2="34" y2="52" stroke="#06b6d4" stroke-width="0.8" opacity="0.4"/>
+  <line x1="50" y1="48" x2="66" y2="52" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+  <line x1="50" y1="48" x2="50" y2="22" stroke="#06b6d4" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Top and bottom hexagon accent dots -->
+  <circle cx="50" cy="8" r="2" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="50" cy="88" r="2" fill="#8b5cf6" opacity="0.8"/>
+
+  <!-- Company name -->
+  <text x="110" y="42" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="28" letter-spacing="0.02em">
+    <tspan fill="#06b6d4">ARI</tspan><tspan fill="#f1f5f9">NUTPAM</tspan>
+  </text>
+
+  <!-- Subtle descriptor -->
+  <text x="110" y="64" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="11" letter-spacing="0.2em" fill="#94a3b8">
+    AI ENGINEERING
+  </text>
+
+  <!-- Subtle gradient line separator -->
+  <line x1="110" y1="48" x2="295" y2="48" stroke="url(#grad2)" stroke-width="1"/>
+</svg>

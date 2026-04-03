@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARINutpam | AI Engineering Consultancy - Coimbatore, India</title>
+  <meta name="description" content="Full-stack AI solutions for industry. Computer vision, IIoT platforms, ML consulting, and custom AI products. Based in Coimbatore, India.">
+  <meta name="keywords" content="AI, Machine Learning, Computer Vision, IIoT, Industrial IoT, AI Consulting, Coimbatore, India">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ARINutpam | AI Engineering Consultancy">
+  <meta property="og:description" content="Full-stack AI solutions for industry. Computer vision, IIoT platforms, ML consulting, and custom AI products.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arinutpam.in">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ARINutpam",
+    "description": "Full-stack AI engineering consultancy specializing in computer vision, IIoT platforms, and custom AI products.",
+    "url": "https://arinutpam.in",
+    "telephone": "+919790517374",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "28/1 Umamaheswari Nagar, Vilankuruchi",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "641035",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Fr 09:00-17:00"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">
+        <span>ARI</span><span>Nutpam</span>
+      </a>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#demo" class="nav__link">AI Demo</a>
+        <a href="#blog" class="nav__link">Insights</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+
+      <a href="#contact" class="btn btn--primary btn--small nav__cta desktop-only">Get in Touch</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="navMobile">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#demo">AI Demo</a>
+    <a href="#blog">Insights</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn--primary" style="margin-top: 1rem;">Get in Touch</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <!-- Video Background (lazy-loaded) -->
+    <div class="hero__video-bg" id="heroVideoBg"></div>
+
+    <!-- Dark Overlay -->
+    <div class="hero__overlay"></div>
+
+    <!-- Neural Network Canvas -->
+    <div class="hero__canvas">
+      <canvas id="neuralCanvas"></canvas>
+    </div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="badge">AI Engineering Consultancy</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="text-gradient">THINK. INNOVATE. THRIVE.</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Full-stack AI solutions for industrial intelligence. From computer vision
+        to IIoT platforms, we engineer the future of manufacturing.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#services" class="btn btn--primary">
+          Explore Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#projects" class="btn btn--outline">See Our Work</a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What We <span class="text-gradient">Build</span></h2>
+        <p>End-to-end AI engineering solutions designed for real-world industrial challenges.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Card 1: AI Vision -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="8"/>
+              <circle cx="24" cy="24" r="16"/>
+              <path d="M24 4v4M24 40v4M4 24h4M40 24h4M9.86 9.86l2.83 2.83M35.31 35.31l2.83 2.83M9.86 38.14l2.83-2.83M35.31 12.69l2.83-2.83"/>
+            </svg>
+          </div>
+          <h3 class="card__title">AI Vision Systems</h3>
+          <p class="card__text">
+            Computer vision solutions for automated quality inspection, defect detection,
+            object recognition, and visual analytics on the production floor.
+          </p>
+          <a href="#contact" class="card__link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Card 2: AI/ML Consulting -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 8h20v32H14z"/>
+              <path d="M20 16h8M20 22h8M20 28h5"/>
+              <circle cx="37" cy="12" r="5"/>
+              <path d="M37 9v3h3"/>
+              <path d="M6 36l6-8 4 4 6-6"/>
+            </svg>
+          </div>
+          <h3 class="card__title">AI/ML Consulting</h3>
+          <p class="card__text">
+            Strategic AI advisory, model development, MLOps pipeline design, and
+            data architecture for organizations ready to adopt intelligent systems.
+          </p>
+          <a href="#contact" class="card__link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Card 3: IIoT + AI -->
+        <div class="card reveal reveal-delay-3">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="28" width="12" height="12" rx="2"/>
+              <rect x="28" y="28" width="12" height="12" rx="2"/>
+              <rect x="18" y="8" width="12" height="12" rx="2"/>
+              <path d="M24 20v8M14 28l6-8M34 28l-6-8"/>
+              <circle cx="6" cy="20" r="3"/>
+              <circle cx="42" cy="20" r="3"/>
+              <path d="M9 20h9M30 14h-1M39 20h-9"/>
+            </svg>
+          </div>
+          <h3 class="card__title">IIoT + AI Platform</h3>
+          <p class="card__text">
+            Sensor integration, real-time monitoring dashboards, predictive maintenance,
+            and cloud-based production analytics for smart manufacturing.
+          </p>
+          <a href="#contact" class="card__link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Card 4: Custom AI Products -->
+        <div class="card reveal reveal-delay-4">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8z"/>
+              <circle cx="24" cy="36" r="8"/>
+              <path d="M20 36h8M24 32v8"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Custom AI Products</h3>
+          <p class="card__text">
+            Bespoke AI-powered tools, process automation systems, intelligent
+            reporting platforms, and domain-specific solutions built to your specs.
+          </p>
+          <a href="#contact" class="card__link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section section--surface" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <h2>Engineering Intelligence <span class="text-gradient">Since Day One</span></h2>
+          <p>
+            Based in Coimbatore, India's manufacturing hub, ARINutpam bridges the gap
+            between cutting-edge AI research and real-world industrial applications. We
+            don't just build models &mdash; we engineer complete intelligence systems that
+            deliver measurable results on the factory floor.
+          </p>
+          <p>
+            Our team combines deep expertise in machine learning, computer vision, and
+            industrial automation to transform how businesses operate. From textile mills
+            to automotive plants, we've deployed AI systems that reduce costs, improve
+            quality, and drive growth.
+          </p>
+        </div>
+
+        <div class="about__visual reveal reveal-delay-2">
+          <div class="about__visual-inner">
+            <span class="about__visual-text">AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__vision reveal">
+        <div class="vision-card">
+          <h3 class="vision-card__title">Our Vision</h3>
+          <p>To be the catalyst for India's Industry 4.0 transformation &mdash; harnessing AI responsibly to build a manufacturing ecosystem where waste is eliminated, quality is assured, and sustainability is the standard.</p>
+        </div>
+        <div class="vision-card">
+          <h3 class="vision-card__title">Our Mission</h3>
+          <p>To engineer intelligent vision and automation systems that help Indian manufacturers cut rework, reduce material waste, and drive operational excellence &mdash; making sustainable production not just possible, but profitable.</p>
+        </div>
+      </div>
+
+      <div class="about__stats reveal">
+        <div class="stat">
+          <div class="stat__number" data-target="50" data-suffix="+">0</div>
+          <div class="stat__label">Projects Delivered</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="15" data-suffix="+">0</div>
+          <div class="stat__label">Industries Served</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="95" data-suffix="+%">0</div>
+          <div class="stat__label">System Uptime</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASE STUDIES ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our <span class="text-gradient">Work</span></h2>
+        <p>Real solutions delivering real results for manufacturers across India.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Project 1 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card__image">
+            <div class="project-card__image-inner project-card__image-inner--1"></div>
+            <div class="project-card__image-gradient"></div>
+            <span class="badge project-card__badge">Computer Vision</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Automated Quality Inspection for Textile Manufacturing</h3>
+            <p class="project-card__metric">&#10003; 98.7% defect detection accuracy</p>
+            <a href="#contact" class="project-card__link">
+              View Details
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card__image">
+            <div class="project-card__image-inner project-card__image-inner--2"></div>
+            <div class="project-card__image-gradient"></div>
+            <span class="badge project-card__badge">IIoT</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Real-time Equipment Monitoring Dashboard</h3>
+            <p class="project-card__metric">&#10003; 35% reduction in downtime</p>
+            <a href="#contact" class="project-card__link">
+              View Details
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal reveal-delay-3">
+          <div class="project-card__image">
+            <div class="project-card__image-inner project-card__image-inner--3"></div>
+            <div class="project-card__image-gradient"></div>
+            <span class="badge project-card__badge">AI/ML</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">AI-Powered Inventory Classification System</h3>
+            <p class="project-card__metric">&#10003; 4x faster processing</p>
+            <a href="#contact" class="project-card__link">
+              View Details
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CUSTOMER LOGOS ===== -->
+  <section class="section section--surface customers" id="customers">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Trusted By <span class="text-gradient">Industry Leaders</span></h2>
+      </div>
+    </div>
+    <div class="customers__marquee">
+      <div class="customers__track">
+        <a href="https://karmainnovations.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="Karma Innovations">
+          <img src="assets/images/customers/karma.png" alt="Karma Innovations">
+        </a>
+        <a href="https://jkfenner.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="JK Fenner">
+          <img src="assets/images/customers/jkfenner.png" alt="JK Fenner">
+        </a>
+        <a href="https://jktyre.com" target="_blank" rel="noopener" class="customers__logo" title="JK Tyre">
+          <img src="assets/images/customers/jktyre.svg" alt="JK Tyre">
+        </a>
+        <a href="https://iljin.co.in" target="_blank" rel="noopener" class="customers__logo" title="ILJIN">
+          <img src="assets/images/customers/iljin.png" alt="ILJIN Electronics">
+        </a>
+        <a href="https://sakthiauto.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="Sakthi Automotive">
+          <img src="assets/images/customers/sakthiauto.png" alt="Sakthi Automotive">
+        </a>
+        <a href="https://mechmetengineers.com" target="_blank" rel="noopener" class="customers__logo" title="Mechmet Engineers">
+          <img src="assets/images/customers/mechmet.png" alt="Mechmet Engineers">
+        </a>
+        <a href="https://lakshmilife.com" target="_blank" rel="noopener" class="customers__logo" title="Lakshmi Life Sciences">
+          <img src="assets/images/customers/lakshmilife.png" alt="Lakshmi Life Sciences">
+        </a>
+        <a href="https://ejindia.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="EJ India">
+          <img src="assets/images/customers/ejindia.png" alt="Emerald Jewel Industry">
+        </a>
+        <a href="https://aquagroup.in" target="_blank" rel="noopener" class="customers__logo" title="Aqua Group">
+          <img src="assets/images/customers/aquagroup.png" alt="Aqua Group">
+        </a>
+        <a href="https://srec.ac.in" target="_blank" rel="noopener" class="customers__logo" title="SREC - Sona College">
+          <img src="assets/images/customers/srec.svg" alt="SREC">
+        </a>
+        <a href="https://slb.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="SLB (Schlumberger)">
+          <img src="assets/images/customers/slb.svg" alt="SLB">
+        </a>
+        <!-- Duplicated for seamless loop -->
+        <a href="https://karmainnovations.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="Karma Innovations" aria-hidden="true">
+          <img src="assets/images/customers/karma.png" alt="Karma Innovations">
+        </a>
+        <a href="https://jkfenner.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="JK Fenner" aria-hidden="true">
+          <img src="assets/images/customers/jkfenner.png" alt="JK Fenner">
+        </a>
+        <a href="https://jktyre.com" target="_blank" rel="noopener" class="customers__logo" title="JK Tyre" aria-hidden="true">
+          <img src="assets/images/customers/jktyre.svg" alt="JK Tyre">
+        </a>
+        <a href="https://iljin.co.in" target="_blank" rel="noopener" class="customers__logo" title="ILJIN" aria-hidden="true">
+          <img src="assets/images/customers/iljin.png" alt="ILJIN Electronics">
+        </a>
+        <a href="https://sakthiauto.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="Sakthi Automotive" aria-hidden="true">
+          <img src="assets/images/customers/sakthiauto.png" alt="Sakthi Automotive">
+        </a>
+        <a href="https://mechmetengineers.com" target="_blank" rel="noopener" class="customers__logo" title="Mechmet Engineers" aria-hidden="true">
+          <img src="assets/images/customers/mechmet.png" alt="Mechmet Engineers">
+        </a>
+        <a href="https://lakshmilife.com" target="_blank" rel="noopener" class="customers__logo" title="Lakshmi Life Sciences" aria-hidden="true">
+          <img src="assets/images/customers/lakshmilife.png" alt="Lakshmi Life Sciences">
+        </a>
+        <a href="https://ejindia.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="EJ India" aria-hidden="true">
+          <img src="assets/images/customers/ejindia.png" alt="Emerald Jewel Industry">
+        </a>
+        <a href="https://aquagroup.in" target="_blank" rel="noopener" class="customers__logo" title="Aqua Group" aria-hidden="true">
+          <img src="assets/images/customers/aquagroup.png" alt="Aqua Group">
+        </a>
+        <a href="https://srec.ac.in" target="_blank" rel="noopener" class="customers__logo" title="SREC - Sona College" aria-hidden="true">
+          <img src="assets/images/customers/srec.svg" alt="SREC">
+        </a>
+        <a href="https://slb.com" target="_blank" rel="noopener" class="customers__logo customers__logo--dark" title="SLB (Schlumberger)" aria-hidden="true">
+          <img src="assets/images/customers/slb.svg" alt="SLB">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI DEMO ===== -->
+  <section class="section section--surface" id="demo">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Experience AI <span class="text-gradient">in Your Browser</span></h2>
+        <p>Powered by the same vision technology we deploy in production. Upload any image to see AI classification in action.</p>
+      </div>
+
+      <div class="demo__grid">
+        <!-- Upload Panel -->
+        <div class="reveal reveal-delay-1">
+          <div class="demo__upload" id="demoUpload">
+            <div class="demo__upload-icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+            </div>
+            <p class="demo__upload-text">Drop an image here or click to upload</p>
+            <p class="demo__upload-hint">Supports JPG, PNG, WebP</p>
+            <input type="file" id="demoFileInput" accept="image/*" hidden>
+
+            <div class="demo__preview" id="demoPreview">
+              <img id="demoImage" alt="Uploaded image for classification">
+              <button class="btn btn--outline btn--small" id="demoReset">Try Another Image</button>
+            </div>
+          </div>
+
+          <div class="demo__samples">
+            <div class="demo__sample" data-sample="cat" title="Classify a cat">&#128049;</div>
+            <div class="demo__sample" data-sample="car" title="Classify a car">&#128663;</div>
+            <div class="demo__sample" data-sample="flower" title="Classify a flower">&#127804;</div>
+          </div>
+        </div>
+
+        <!-- Results Panel -->
+        <div class="demo__results reveal reveal-delay-2">
+          <h3>Classification Results</h3>
+
+          <div class="demo__loading" id="demoLoading" style="display: none;">
+            <div class="demo__loading-spinner"></div>
+            <p>Loading AI model...</p>
+          </div>
+
+          <div class="demo__status" id="demoStatus">
+            <p>Upload an image to see AI classification results. The model loads when you first interact.</p>
+          </div>
+
+          <div class="demo__chart-container" id="demoChartContainer">
+            <canvas id="demoChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG / INSIGHTS ===== -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Insights & <span class="text-gradient">Updates</span></h2>
+        <p>Perspectives on AI, industrial automation, and the future of manufacturing.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Blog Card 1 -->
+        <article class="blog-card reveal reveal-delay-1">
+          <div class="blog-card__bar blog-card__bar--1"></div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__category">Computer Vision</span>
+              <span>&middot;</span>
+              <span>Coming Soon</span>
+            </div>
+            <h3 class="blog-card__title">How Computer Vision is Transforming Quality Control in Indian Manufacturing</h3>
+            <p class="blog-card__excerpt">
+              From textile mills in Coimbatore to auto parts in Pune, AI-powered visual inspection
+              is catching defects that human eyes miss.
+            </p>
+            <span class="blog-card__link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Blog Card 2 -->
+        <article class="blog-card reveal reveal-delay-2">
+          <div class="blog-card__bar blog-card__bar--2"></div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__category">IIoT</span>
+              <span>&middot;</span>
+              <span>Coming Soon</span>
+            </div>
+            <h3 class="blog-card__title">Building Your First IIoT Dashboard: A Practical Guide</h3>
+            <p class="blog-card__excerpt">
+              A step-by-step walkthrough of connecting sensors, collecting data, and building
+              real-time production dashboards.
+            </p>
+            <span class="blog-card__link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Blog Card 3 -->
+        <article class="blog-card reveal reveal-delay-3">
+          <div class="blog-card__bar blog-card__bar--3"></div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__category">Strategy</span>
+              <span>&middot;</span>
+              <span>Coming Soon</span>
+            </div>
+            <h3 class="blog-card__title">The ROI of AI: What SMEs Need to Know Before Investing</h3>
+            <p class="blog-card__excerpt">
+              Understanding the true cost and return of AI adoption for small and medium
+              enterprises in India's industrial landscape.
+            </p>
+            <span class="blog-card__link">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--surface" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Get in <span class="text-gradient">Touch</span></h2>
+        <p>Ready to transform your operations with AI? Let's talk.</p>
+      </div>
+
+      <div class="contact__grid">
+        <!-- Form -->
+        <div class="contact__form-wrapper reveal reveal-delay-1">
+          <h3>Send us a message</h3>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="subject" value="New Contact from ARINutpam.in">
+            <input type="hidden" name="from_name" value="ARINutpam Website">
+
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX">
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" class="form-input" placeholder="Your company name">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" class="form-input" placeholder="Tell us about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+              Send Message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+
+            <div class="form-message form-message--success" id="formSuccess">
+              Thank you! Your message has been sent successfully. We'll get back to you soon.
+            </div>
+            <div class="form-message form-message--error" id="formError">
+              Oops! Something went wrong. Please try again or reach out via WhatsApp.
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact__info reveal reveal-delay-2">
+          <h3>Contact Information</h3>
+
+          <div class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact__detail-content">
+              <div class="contact__detail-label">Phone</div>
+              <div class="contact__detail-value">
+                <a href="tel:+919790517374">+91 97905 17374</a><br>
+                <a href="tel:+919994199908">+91 99941 99908</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="contact__detail-content">
+              <div class="contact__detail-label">WhatsApp</div>
+              <div class="contact__detail-value">
+                <a href="https://wa.me/919790517374" target="_blank" rel="noopener">Message us on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact__detail-content">
+              <div class="contact__detail-label">Address</div>
+              <div class="contact__detail-value">
+                28/1 Umamaheswari Nagar,<br>
+                Vilankuruchi, Coimbatore,<br>
+                Tamil Nadu, India
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2!2d76.97!3d11.03!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDAyJzA2LjAiTiA3NsKwNTgnMTIuMCJF!5e0!3m2!1sen!2sin!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="ARINutpam Location"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span>ARI</span><span>Nutpam</span>
+          </a>
+          <p>Full-stack AI engineering consultancy. We transform industrial operations with intelligent systems that deliver measurable results.</p>
+          <div class="footer__socials">
+            <a href="https://wa.me/919790517374" class="footer__social" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="tel:+919790517374" class="footer__social" aria-label="Phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="#services" class="footer__link">Services</a>
+            <a href="#about" class="footer__link">About Us</a>
+            <a href="#projects" class="footer__link">Projects</a>
+            <a href="#demo" class="footer__link">AI Demo</a>
+            <a href="#blog" class="footer__link">Insights</a>
+            <a href="#contact" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <div class="footer__links">
+            <a href="#services" class="footer__link">AI Vision Systems</a>
+            <a href="#services" class="footer__link">AI/ML Consulting</a>
+            <a href="#services" class="footer__link">IIoT + AI Platform</a>
+            <a href="#services" class="footer__link">Custom AI Products</a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="footer__heading">Contact</h4>
+          <div class="footer__links">
+            <a href="tel:+919790517374" class="footer__link">+91 97905 17374</a>
+            <a href="tel:+919994199908" class="footer__link">+91 99941 99908</a>
+            <a href="https://wa.me/919790517374" class="footer__link" target="_blank" rel="noopener">WhatsApp</a>
+            <span class="footer__link" style="cursor: default;">Coimbatore, Tamil Nadu</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2024&ndash;2026 ARINutpam. All rights reserved.</span>
+        <span class="footer__made">Made with &#9829; in Coimbatore</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919790517374" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/neural-bg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/contact.js"></script>
+
+  <!-- Lazy-load Vimeo video after page load -->
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var bg = document.getElementById('heroVideoBg');
+        if (bg) {
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://player.vimeo.com/video/1096581172?background=1&autoplay=1&loop=1&muted=1&quality=720p';
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allow', 'autoplay; fullscreen');
+          iframe.setAttribute('title', 'ARINutpam background video');
+          iframe.style.cssText = 'width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)';
+          bg.appendChild(iframe);
+        }
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
