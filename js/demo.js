@@ -88,6 +88,13 @@
 
     if (chart) chart.destroy();
 
+    const light = document.documentElement.getAttribute('data-theme') === 'light';
+    const labelColor = light ? '#0f172a' : '#f1f5f9';
+    const subColor = light ? '#475569' : '#94a3b8';
+    const gridColor = light ? 'rgba(148, 163, 184, 0.3)' : 'rgba(30, 41, 59, 0.5)';
+    const tooltipBg = light ? '#ffffff' : '#111827';
+    const tooltipBorder = light ? '#e2e8f0' : '#1e293b';
+
     const ctx = document.getElementById('demoChart').getContext('2d');
     chart = new Chart(ctx, {
       type: 'bar',
@@ -123,10 +130,10 @@
         plugins: {
           legend: { display: false },
           tooltip: {
-            backgroundColor: '#111827',
-            titleColor: '#f1f5f9',
-            bodyColor: '#94a3b8',
-            borderColor: '#1e293b',
+            backgroundColor: tooltipBg,
+            titleColor: labelColor,
+            bodyColor: subColor,
+            borderColor: tooltipBorder,
             borderWidth: 1,
           },
         },
@@ -134,12 +141,12 @@
           x: {
             beginAtZero: true,
             max: 100,
-            grid: { color: 'rgba(30, 41, 59, 0.5)' },
-            ticks: { color: '#94a3b8', callback: (v) => v + '%' },
+            grid: { color: gridColor },
+            ticks: { color: subColor, callback: (v) => v + '%' },
           },
           y: {
             grid: { display: false },
-            ticks: { color: '#f1f5f9', font: { size: 12 } },
+            ticks: { color: labelColor, font: { size: 12 } },
           },
         },
       },
@@ -211,9 +218,9 @@
 
   // ===== Sample Images =====
   const sampleImages = {
-    cat: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg',
-    car: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2019_Honda_Civic_sedan_%28facelift%29%2C_front_9.29.19.jpg/1200px-2019_Honda_Civic_sedan_%28facelift%29%2C_front_9.29.19.jpg',
-    flower: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sunflower_from_Silesia2.jpg/800px-Sunflower_from_Silesia2.jpg',
+    cat: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/480px-Cat03.jpg',
+    car: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019_Toyota_Corolla_Hybrid_1.8.jpg/640px-2019_Toyota_Corolla_Hybrid_1.8.jpg',
+    flower: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Dahlia_x_hybrida.jpg/640px-Dahlia_x_hybrida.jpg',
   };
 
   samples.forEach((sample) => {
