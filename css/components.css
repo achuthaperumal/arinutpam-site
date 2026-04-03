@@ -18,11 +18,11 @@
 .btn--primary {
   background: var(--gradient);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .btn--primary:hover {
-  box-shadow: 0 6px 25px rgba(6, 182, 212, 0.4);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
 }
 
 .btn--outline {
@@ -31,7 +31,7 @@
 }
 
 .btn--outline:hover {
-  background: rgba(6, 182, 212, 0.1);
+  background: rgba(16, 185, 129, 0.1);
   box-shadow: var(--shadow-glow);
 }
 
@@ -115,9 +115,9 @@
   font-weight: var(--fw-medium);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border: 1px solid rgba(6, 182, 212, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   color: var(--accent);
-  background: rgba(6, 182, 212, 0.08);
+  background: rgba(16, 185, 129, 0.08);
 }
 
 .badge::before {
@@ -160,7 +160,7 @@
 
 .form-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
 .form-input::placeholder {
