@@ -1,16 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none">
-  <!-- Concept 5: Geometric Pyramid — inspired by original triangular logo -->
+  <!-- Concept 5: Geometric Pyramid — rich fractal triangle with purple/fuchsia palette -->
   <defs>
-    <linearGradient id="lg5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
+    <linearGradient id="lg5a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
     </linearGradient>
     <linearGradient id="lg5b" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="lg5c" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#e879f9"/>
     </linearGradient>
     <filter id="glow5">
-      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow5s">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -18,54 +30,82 @@
     </filter>
   </defs>
 
-  <!-- === TRIANGLE MARK (0-92) === -->
+  <!-- === TRIANGLE MARK === -->
 
-  <!-- Outer triangle -->
-  <polygon points="46,4 4,90 88,90" stroke="url(#lg5)" stroke-width="2.5" fill="none" stroke-linejoin="round" filter="url(#glow5)"/>
+  <!-- Outer triangle with glow -->
+  <polygon points="46,3 2,92 90,92" stroke="url(#lg5b)" stroke-width="2.8" fill="none" stroke-linejoin="round" filter="url(#glow5)"/>
 
-  <!-- Inner parallel triangle (depth/bevel effect) -->
-  <polygon points="46,13 11,85 81,85" stroke="url(#lg5)" stroke-width="0.7" fill="none" stroke-linejoin="round" opacity="0.25"/>
+  <!-- Inner bevel line (depth) -->
+  <polygon points="46,10 8,88 84,88" stroke="#a855f7" stroke-width="0.6" fill="none" stroke-linejoin="round" opacity="0.3"/>
 
-  <!-- Medial triangle (inverted, connecting midpoints) -->
-  <polygon points="25,47 67,47 46,90" stroke="url(#lg5)" stroke-width="1.5" fill="none" stroke-linejoin="round" opacity="0.55"/>
+  <!-- Level 1: Medial triangle (inverted) -->
+  <polygon points="24,47.5 68,47.5 46,92" stroke="url(#lg5a)" stroke-width="1.6" fill="none" stroke-linejoin="round" opacity="0.7"/>
 
-  <!-- Inner upward triangle (creates Star of David overlap) -->
-  <polygon points="46,30 22,70 70,70" stroke="url(#lg5b)" stroke-width="1.2" fill="none" stroke-linejoin="round" opacity="0.4"/>
+  <!-- Level 2: Inner upward triangle -->
+  <polygon points="46,25 18,74 74,74" stroke="url(#lg5c)" stroke-width="1.0" fill="none" stroke-linejoin="round" opacity="0.45"/>
 
-  <!-- Medians (vertex to opposite midpoint) -->
-  <line x1="46" y1="4" x2="46" y2="90" stroke="#06b6d4" stroke-width="0.6" opacity="0.18"/>
-  <line x1="4" y1="90" x2="67" y2="47" stroke="#06b6d4" stroke-width="0.6" opacity="0.18"/>
-  <line x1="88" y1="90" x2="25" y2="47" stroke="#8b5cf6" stroke-width="0.6" opacity="0.18"/>
+  <!-- Level 3: Smaller inverted triangle -->
+  <polygon points="32,49.5 60,49.5 46,74" stroke="#a855f7" stroke-width="0.8" fill="none" stroke-linejoin="round" opacity="0.35"/>
 
-  <!-- Cross-connections for crystal/faceted effect -->
-  <line x1="25" y1="47" x2="70" y2="70" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
-  <line x1="67" y1="47" x2="22" y2="70" stroke="#8b5cf6" stroke-width="0.5" opacity="0.15"/>
-  <line x1="46" y1="30" x2="46" y2="70" stroke="#22d3ee" stroke-width="0.5" opacity="0.15"/>
+  <!-- Level 4: Tiny upward triangle (center) -->
+  <polygon points="46,40 36,62 56,62" stroke="#c084fc" stroke-width="0.7" fill="none" stroke-linejoin="round" opacity="0.3"/>
 
-  <!-- Central diamond accent -->
-  <polygon points="46,42 38,58 46,74 54,58" stroke="#22d3ee" stroke-width="1" fill="none" opacity="0.4"/>
+  <!-- Medians -->
+  <line x1="46" y1="3" x2="46" y2="92" stroke="#8b5cf6" stroke-width="0.5" opacity="0.15"/>
+  <line x1="2" y1="92" x2="68" y2="47.5" stroke="#8b5cf6" stroke-width="0.5" opacity="0.15"/>
+  <line x1="90" y1="92" x2="24" y2="47.5" stroke="#a855f7" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Cross-lattice lines (crystal facets) -->
+  <line x1="24" y1="47.5" x2="74" y2="74" stroke="#8b5cf6" stroke-width="0.4" opacity="0.12"/>
+  <line x1="68" y1="47.5" x2="18" y2="74" stroke="#a855f7" stroke-width="0.4" opacity="0.12"/>
+  <line x1="46" y1="25" x2="24" y2="47.5" stroke="#c084fc" stroke-width="0.4" opacity="0.12"/>
+  <line x1="46" y1="25" x2="68" y2="47.5" stroke="#c084fc" stroke-width="0.4" opacity="0.12"/>
+  <line x1="18" y1="74" x2="46" y2="92" stroke="#8b5cf6" stroke-width="0.4" opacity="0.1"/>
+  <line x1="74" y1="74" x2="46" y2="92" stroke="#a855f7" stroke-width="0.4" opacity="0.1"/>
+
+  <!-- Diagonal traces (circuit-board feel) -->
+  <line x1="35" y1="25" x2="14" y2="62" stroke="#e879f9" stroke-width="0.4" opacity="0.15"/>
+  <line x1="57" y1="25" x2="78" y2="62" stroke="#e879f9" stroke-width="0.4" opacity="0.15"/>
+  <line x1="14" y1="68" x2="35" y2="86" stroke="#a855f7" stroke-width="0.4" opacity="0.1"/>
+  <line x1="78" y1="68" x2="57" y2="86" stroke="#a855f7" stroke-width="0.4" opacity="0.1"/>
+
+  <!-- Central diamond -->
+  <polygon points="46,42 37,58 46,74 55,58" stroke="#e879f9" stroke-width="1.1" fill="none" opacity="0.5" filter="url(#glow5s)"/>
 
   <!-- Central A letterform -->
-  <path d="M40,69 L46,49 L52,69" stroke="#22d3ee" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
-  <line x1="42.5" y1="62" x2="49.5" y2="62" stroke="#22d3ee" stroke-width="1.5"/>
+  <path d="M39,69 L46,48 L53,69" stroke="#e879f9" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow5s)"/>
+  <line x1="42" y1="62" x2="50" y2="62" stroke="#e879f9" stroke-width="1.5"/>
 
-  <!-- Vertex accent dots -->
-  <circle cx="46" cy="4" r="2" fill="#06b6d4" opacity="0.8"/>
-  <circle cx="4" cy="90" r="1.5" fill="#06b6d4" opacity="0.4"/>
-  <circle cx="88" cy="90" r="1.5" fill="#8b5cf6" opacity="0.4"/>
+  <!-- Node dots at key vertices -->
+  <circle cx="46" cy="3" r="2" fill="#c084fc" opacity="0.9"/>
+  <circle cx="2" cy="92" r="1.8" fill="#8b5cf6" opacity="0.5"/>
+  <circle cx="90" cy="92" r="1.8" fill="#a855f7" opacity="0.5"/>
 
-  <!-- Midpoint accent dots -->
-  <circle cx="25" cy="47" r="1.2" fill="#06b6d4" opacity="0.35"/>
-  <circle cx="67" cy="47" r="1.2" fill="#8b5cf6" opacity="0.35"/>
-  <circle cx="46" cy="90" r="1.2" fill="#64748b" opacity="0.3"/>
+  <!-- Midpoint nodes -->
+  <circle cx="24" cy="47.5" r="1.3" fill="#a855f7" opacity="0.5"/>
+  <circle cx="68" cy="47.5" r="1.3" fill="#c084fc" opacity="0.5"/>
+  <circle cx="46" cy="92" r="1.3" fill="#8b5cf6" opacity="0.4"/>
+
+  <!-- Inner triangle vertex nodes -->
+  <circle cx="46" cy="25" r="1" fill="#e879f9" opacity="0.5"/>
+  <circle cx="18" cy="74" r="1" fill="#8b5cf6" opacity="0.35"/>
+  <circle cx="74" cy="74" r="1" fill="#a855f7" opacity="0.35"/>
+
+  <!-- Micro dots along edges for tech feel -->
+  <circle cx="35" cy="25.5" r="0.7" fill="#c084fc" opacity="0.3"/>
+  <circle cx="57" cy="25.5" r="0.7" fill="#c084fc" opacity="0.3"/>
+  <circle cx="13" cy="70" r="0.7" fill="#8b5cf6" opacity="0.25"/>
+  <circle cx="79" cy="70" r="0.7" fill="#a855f7" opacity="0.25"/>
+  <circle cx="35" cy="86" r="0.7" fill="#8b5cf6" opacity="0.2"/>
+  <circle cx="57" cy="86" r="0.7" fill="#a855f7" opacity="0.2"/>
 
   <!-- Company name -->
-  <text x="102" y="42" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="32" letter-spacing="0.02em">
-    <tspan fill="#06b6d4">ARI</tspan><tspan fill="#64748b">NUTPAM</tspan>
+  <text x="104" y="42" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="32" letter-spacing="0.02em">
+    <tspan fill="#a855f7">ARI</tspan><tspan fill="#64748b">NUTPAM</tspan>
   </text>
 
   <!-- Subtitle -->
-  <text x="102" y="66" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="11" letter-spacing="0.25em" fill="#64748b">
+  <text x="104" y="66" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="11" letter-spacing="0.25em" fill="#64748b">
     AI ENGINEERING
   </text>
 </svg>

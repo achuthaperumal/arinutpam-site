@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none">
+  <!-- Concept 6: AI Pinwheel — swept petal mark with slow spin animation -->
+  <defs>
+    <linearGradient id="lg6a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pinwheel mark — 5 swept petals rotating around center (46, 48) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 46 48" to="360 46 48" dur="25s" repeatCount="indefinite"/>
+
+    <!-- Petal 1: deep violet -->
+    <path d="M46,48 Q34,32 44,12 Q48,28 46,48Z" fill="#6d28d9" opacity="0.9"/>
+
+    <!-- Petal 2: violet -->
+    <g transform="rotate(72, 46, 48)">
+      <path d="M46,48 Q34,32 44,12 Q48,28 46,48Z" fill="#7c3aed" opacity="0.9"/>
+    </g>
+
+    <!-- Petal 3: purple -->
+    <g transform="rotate(144, 46, 48)">
+      <path d="M46,48 Q34,32 44,12 Q48,28 46,48Z" fill="#8b5cf6" opacity="0.85"/>
+    </g>
+
+    <!-- Petal 4: light purple -->
+    <g transform="rotate(216, 46, 48)">
+      <path d="M46,48 Q34,32 44,12 Q48,28 46,48Z" fill="#a855f7" opacity="0.85"/>
+    </g>
+
+    <!-- Petal 5: fuchsia -->
+    <g transform="rotate(288, 46, 48)">
+      <path d="M46,48 Q34,32 44,12 Q48,28 46,48Z" fill="#c084fc" opacity="0.8"/>
+    </g>
+
+    <!-- Center circle -->
+    <circle cx="46" cy="48" r="4" fill="#e9d5ff" opacity="0.9"/>
+    <circle cx="46" cy="48" r="2" fill="#ffffff" opacity="0.8"/>
+  </g>
+
+  <!-- Company name -->
+  <text x="100" y="42" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="32" letter-spacing="0.02em">
+    <tspan fill="#8b5cf6">ARI</tspan><tspan fill="#64748b">NUTPAM</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="66" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="11" letter-spacing="0.25em" fill="#64748b">
+    AI ENGINEERING
+  </text>
+</svg>
