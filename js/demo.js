@@ -188,6 +188,7 @@
     uploadArea.querySelector('.demo__upload-text').style.display = 'none';
     uploadArea.querySelector('.demo__upload-hint').style.display = 'none';
     preview.style.display = 'block';
+    demoImage.crossOrigin = 'anonymous';
     demoImage.src = src;
 
     demoImage.onload = () => classifyImage(demoImage);
