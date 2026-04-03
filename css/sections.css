@@ -24,19 +24,13 @@
 }
 
 .nav__logo {
-  font-size: 1.5rem;
-  font-weight: var(--fw-extrabold);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
-.nav__logo span:first-child {
-  color: var(--accent);
-}
-
-.nav__logo span:last-child {
-  color: var(--text-primary);
-  font-weight: var(--fw-medium);
+.nav__logo img {
+  height: 28px;
+  width: auto;
 }
 
 .nav__links {
@@ -882,4 +876,88 @@
   display: flex;
   align-items: center;
   gap: var(--gap-sm);
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  margin-left: var(--gap-md);
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle__sun { display: none; }
+.theme-toggle__moon { display: block; }
+
+[data-theme="light"] .theme-toggle__sun { display: block; }
+[data-theme="light"] .theme-toggle__moon { display: none; }
+
+/* ===== LIGHT MODE OVERRIDES ===== */
+[data-theme="light"] .nav.scrolled {
+  background: rgba(248, 250, 252, 0.95);
+}
+
+[data-theme="light"] .nav__mobile {
+  background: rgba(248, 250, 252, 0.98);
+}
+
+[data-theme="light"] .hero__overlay {
+  background: rgba(248, 250, 252, 0.8);
+}
+
+
+[data-theme="light"] .demo__upload:hover,
+[data-theme="light"] .demo__upload.dragover {
+  background: rgba(5, 150, 105, 0.05);
+}
+
+[data-theme="light"] .contact__detail-icon {
+  background: rgba(5, 150, 105, 0.1);
+}
+
+[data-theme="light"] .footer__social:hover {
+  background: rgba(5, 150, 105, 0.1);
+}
+
+[data-theme="light"] .project-card__image-inner--1 {
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd, #7dd3fc);
+}
+
+[data-theme="light"] .project-card__image-inner--2 {
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe, #c4b5fd);
+}
+
+[data-theme="light"] .project-card__image-inner--3 {
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0, #6ee7b7);
+}
+
+[data-theme="light"] .customers__logo:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(5, 150, 105, 0.12);
+}
+
+[data-theme="light"] .customers__logo:hover .customers__logo-text {
+  color: var(--accent);
+}
+
+[data-theme="light"] .scroll-indicator svg {
+  filter: drop-shadow(0 0 6px rgba(5, 150, 105, 0.6));
 }

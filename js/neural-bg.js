@@ -141,8 +141,20 @@
     }
   }
 
+  function isLight() {
+    return document.documentElement.getAttribute('data-theme') === 'light';
+  }
+
   function draw() {
     ctx.clearRect(0, 0, width, height);
+
+    const light = isLight();
+    // Light mode: use darker, more saturated colors
+    const edgeColor = light ? '4, 120, 87' : '6, 182, 212';         // dark green vs cyan
+    const pulseColor = light ? '5, 150, 105' : '6, 182, 212';       // green vs cyan
+    const violetColor = light ? '109, 40, 217' : '139, 92, 246';    // dark violet vs violet
+    const edgeMult = light ? 0.45 : 0.2;
+    const nodeMult = light ? 1.4 : 1;
 
     const edges = getEdges();
 
@@ -151,13 +163,13 @@
       const n1 = nodes[edge.i];
       const n2 = nodes[edge.j];
       const shimmer = 0.5 + 0.5 * Math.sin(time * 1.5 + edge.i * 0.5);
-      const edgeAlpha = edge.opacity * 0.2 * (0.7 + 0.3 * shimmer);
+      const edgeAlpha = edge.opacity * edgeMult * (0.7 + 0.3 * shimmer);
 
       ctx.beginPath();
       ctx.moveTo(n1.x, n1.y);
       ctx.lineTo(n2.x, n2.y);
-      ctx.strokeStyle = `rgba(6, 182, 212, ${edgeAlpha})`;
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = `rgba(${edgeColor}, ${edgeAlpha})`;
+      ctx.lineWidth = light ? 1.2 : 1;
       ctx.stroke();
     }
 
@@ -174,8 +186,8 @@
       const tx = from.x + (to.x - from.x) * trailStart;
       const ty = from.y + (to.y - from.y) * trailStart;
       const trailGrad = ctx.createLinearGradient(tx, ty, x, y);
-      trailGrad.addColorStop(0, 'rgba(6, 182, 212, 0)');
-      trailGrad.addColorStop(1, `rgba(6, 182, 212, ${pulse.alpha * 0.5})`);
+      trailGrad.addColorStop(0, `rgba(${pulseColor}, 0)`);
+      trailGrad.addColorStop(1, `rgba(${pulseColor}, ${pulse.alpha * (light ? 0.7 : 0.5)})`);
       ctx.beginPath();
       ctx.moveTo(tx, ty);
       ctx.lineTo(x, y);
@@ -185,9 +197,9 @@
 
       // Pulse glow
       const gradient = ctx.createRadialGradient(x, y, 0, x, y, pulse.size);
-      gradient.addColorStop(0, `rgba(6, 182, 212, ${pulse.alpha * 0.9})`);
-      gradient.addColorStop(0.4, `rgba(139, 92, 246, ${pulse.alpha * 0.4})`);
-      gradient.addColorStop(1, 'rgba(6, 182, 212, 0)');
+      gradient.addColorStop(0, `rgba(${pulseColor}, ${pulse.alpha * 0.9})`);
+      gradient.addColorStop(0.4, `rgba(${violetColor}, ${pulse.alpha * 0.4})`);
+      gradient.addColorStop(1, `rgba(${pulseColor}, 0)`);
       ctx.beginPath();
       ctx.arc(x, y, pulse.size, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
@@ -196,14 +208,16 @@
       // Bright core
       ctx.beginPath();
       ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${pulse.alpha})`;
+      ctx.fillStyle = light
+        ? `rgba(5, 150, 105, ${pulse.alpha})`
+        : `rgba(255, 255, 255, ${pulse.alpha})`;
       ctx.fill();
     }
 
     // Draw nodes
     for (const node of nodes) {
       const pulseFactor = 0.5 + 0.5 * Math.sin(node.pulsePhase);
-      const alpha = node.baseAlpha * (0.6 + 0.4 * pulseFactor);
+      const alpha = node.baseAlpha * (0.6 + 0.4 * pulseFactor) * nodeMult;
 
       // Mouse proximity glow
       const dx = mouse.x - node.x;
@@ -214,14 +228,13 @@
       const r = node.radius * (1 + 0.3 * pulseFactor + 0.4 * mouseGlow);
       const finalAlpha = Math.min(1, alpha + mouseGlow * 0.6);
 
+      const nodeColor = node.hue === 187 ? pulseColor : violetColor;
+
       // Outer glow
       const glowSize = r * (4 + mouseGlow * 3);
-      const cyanOrViolet = node.hue === 187
-        ? `rgba(6, 182, 212, ${finalAlpha * 0.35})`
-        : `rgba(139, 92, 246, ${finalAlpha * 0.25})`;
       const glow = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, glowSize);
-      glow.addColorStop(0, cyanOrViolet);
-      glow.addColorStop(1, 'rgba(6, 182, 212, 0)');
+      glow.addColorStop(0, `rgba(${nodeColor}, ${finalAlpha * (light ? 0.5 : 0.35)})`);
+      glow.addColorStop(1, `rgba(${nodeColor}, 0)`);
       ctx.beginPath();
       ctx.arc(node.x, node.y, glowSize, 0, Math.PI * 2);
       ctx.fillStyle = glow;
@@ -230,16 +243,15 @@
       // Core
       ctx.beginPath();
       ctx.arc(node.x, node.y, r, 0, Math.PI * 2);
-      const coreColor = node.hue === 187
-        ? `rgba(6, 182, 212, ${finalAlpha})`
-        : `rgba(139, 92, 246, ${finalAlpha})`;
-      ctx.fillStyle = coreColor;
+      ctx.fillStyle = `rgba(${nodeColor}, ${finalAlpha})`;
       ctx.fill();
 
       // Bright center
       ctx.beginPath();
       ctx.arc(node.x, node.y, r * 0.4, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${finalAlpha * 0.7})`;
+      ctx.fillStyle = light
+        ? `rgba(${nodeColor}, ${finalAlpha * 0.9})`
+        : `rgba(255, 255, 255, ${finalAlpha * 0.7})`;
       ctx.fill();
     }
   }

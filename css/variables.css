@@ -58,3 +58,18 @@
   /* Nav */
   --nav-height: 4rem;
 }
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-surface: #f1f5f9;
+  --bg-elevated: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent: #059669;
+  --accent-hover: #047857;
+  --border: #cbd5e1;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.1);
+  --shadow-glow-strong: 0 0 40px rgba(16, 185, 129, 0.15);
+}

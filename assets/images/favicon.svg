@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
   <rect width="32" height="32" rx="6" fill="#0a0e17"/>
-  <text x="4" y="23" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="14" fill="#06b6d4">A</text>
-  <text x="15" y="23" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="14" fill="#f1f5f9">N</text>
+  <text x="4" y="23" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="14" fill="#10b981">A</text>
+  <text x="15" y="23" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="14" fill="#a78bfa">N</text>
 </svg>
