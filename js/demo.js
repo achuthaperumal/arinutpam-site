@@ -218,9 +218,9 @@
 
   // ===== Sample Images =====
   const sampleImages = {
-    cat: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/480px-Cat03.jpg',
-    car: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019_Toyota_Corolla_Hybrid_1.8.jpg/640px-2019_Toyota_Corolla_Hybrid_1.8.jpg',
-    flower: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Dahlia_x_hybrida.jpg/640px-Dahlia_x_hybrida.jpg',
+    cat: 'assets/images/samples/cat.jpg',
+    car: 'assets/images/samples/car.jpg',
+    flower: 'assets/images/samples/flower.jpg',
   };
 
   samples.forEach((sample) => {

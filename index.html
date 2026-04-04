@@ -257,7 +257,78 @@
 
         <div class="about__visual reveal reveal-delay-2">
           <div class="about__visual-inner">
-            <span class="about__visual-text">AI</span>
+            <svg class="about__anim" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Rotating outer ring -->
+              <circle cx="200" cy="200" r="160" stroke="url(#ag1)" stroke-width="1" opacity="0.3">
+                <animateTransform attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="60s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Dashed mid ring -->
+              <circle cx="200" cy="200" r="120" stroke="url(#ag1)" stroke-width="1.5" stroke-dasharray="8 12" opacity="0.4">
+                <animateTransform attributeName="transform" type="rotate" values="360 200 200;0 200 200" dur="40s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Inner ring -->
+              <circle cx="200" cy="200" r="80" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4 8" opacity="0.5">
+                <animateTransform attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="25s" repeatCount="indefinite"/>
+              </circle>
+
+              <!-- Orbital dots on outer ring -->
+              <g><circle cx="360" cy="200" r="4" fill="#10b981" opacity="0.8">
+                <animateTransform attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="20s" repeatCount="indefinite"/>
+              </circle></g>
+              <g><circle cx="200" cy="40" r="3" fill="#8b5cf6" opacity="0.7">
+                <animateTransform attributeName="transform" type="rotate" values="90 200 200;450 200 200" dur="25s" repeatCount="indefinite"/>
+              </circle></g>
+              <g><circle cx="40" cy="200" r="3.5" fill="#34d399" opacity="0.6">
+                <animateTransform attributeName="transform" type="rotate" values="180 200 200;540 200 200" dur="30s" repeatCount="indefinite"/>
+              </circle></g>
+
+              <!-- Orbital dots on mid ring -->
+              <g><circle cx="320" cy="200" r="3" fill="#a78bfa" opacity="0.7">
+                <animateTransform attributeName="transform" type="rotate" values="360 200 200;0 200 200" dur="18s" repeatCount="indefinite"/>
+              </circle></g>
+              <g><circle cx="200" cy="80" r="2.5" fill="#10b981" opacity="0.6">
+                <animateTransform attributeName="transform" type="rotate" values="270 200 200;-90 200 200" dur="22s" repeatCount="indefinite"/>
+              </circle></g>
+
+              <!-- Connection lines (pulsing) -->
+              <line x1="200" y1="200" x2="200" y2="40" stroke="#10b981" stroke-width="0.5" opacity="0.2">
+                <animate attributeName="opacity" values="0.1;0.3;0.1" dur="3s" repeatCount="indefinite"/>
+              </line>
+              <line x1="200" y1="200" x2="360" y2="200" stroke="#8b5cf6" stroke-width="0.5" opacity="0.2">
+                <animate attributeName="opacity" values="0.1;0.3;0.1" dur="4s" repeatCount="indefinite"/>
+              </line>
+              <line x1="200" y1="200" x2="80" y2="320" stroke="#10b981" stroke-width="0.5" opacity="0.15">
+                <animate attributeName="opacity" values="0.05;0.25;0.05" dur="5s" repeatCount="indefinite"/>
+              </line>
+              <line x1="200" y1="200" x2="320" y2="80" stroke="#8b5cf6" stroke-width="0.5" opacity="0.15">
+                <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3.5s" repeatCount="indefinite"/>
+              </line>
+
+              <!-- Center pulsing core -->
+              <circle cx="200" cy="200" r="24" fill="url(#ag2)" opacity="0.9">
+                <animate attributeName="r" values="22;26;22" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="200" cy="200" r="12" fill="url(#ag2)" opacity="0.5">
+                <animate attributeName="r" values="30;42;30" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+              </circle>
+
+              <!-- Center "AN" monogram -->
+              <text x="188" y="208" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="22" fill="#10b981">A</text>
+              <text x="203" y="208" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="22" fill="#a78bfa">N</text>
+
+              <!-- Gradient defs -->
+              <defs>
+                <linearGradient id="ag1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#10b981"/>
+                  <stop offset="100%" stop-color="#8b5cf6"/>
+                </linearGradient>
+                <radialGradient id="ag2" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1"/>
+                </radialGradient>
+              </defs>
+            </svg>
           </div>
         </div>
       </div>
@@ -300,7 +371,10 @@
 
       <div class="projects__video reveal">
         <div class="projects__video-wrapper">
-          <iframe src="https://player.vimeo.com/video/1096581172?autoplay=0&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="ARINutpam - Our Work"></iframe>
+          <video autoplay loop muted playsinline title="Coconut Counting — AI Vision PoC">
+            <source src="PoC/Coconut_Tracking_60fps.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
 
@@ -308,12 +382,12 @@
         <!-- Project 1 -->
         <div class="project-card reveal reveal-delay-1">
           <div class="project-card__image">
-            <div class="project-card__image-inner project-card__image-inner--1"></div>
+            <div class="project-card__image-inner project-card__image-inner--1" style="background: url('PoC/1_PCB_Capacitor_ILjin_OK.png') center/cover;"></div>
             <div class="project-card__image-gradient"></div>
             <span class="badge project-card__badge">Computer Vision</span>
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">Automated Quality Inspection for Textile Manufacturing</h3>
+            <h3 class="project-card__title">PCB Capacitor Inspection</h3>
             <p class="project-card__metric">&#10003; 98.7% defect detection accuracy</p>
             <a href="#contact" class="project-card__link">
               View Details
@@ -325,13 +399,13 @@
         <!-- Project 2 -->
         <div class="project-card reveal reveal-delay-2">
           <div class="project-card__image">
-            <div class="project-card__image-inner project-card__image-inner--2"></div>
+            <div class="project-card__image-inner project-card__image-inner--2" style="background: url('PoC/3_Emerald_Ring.png') center/cover;"></div>
             <div class="project-card__image-gradient"></div>
-            <span class="badge project-card__badge">IIoT</span>
+            <span class="badge project-card__badge">Quality Inspection</span>
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">Real-time Equipment Monitoring Dashboard</h3>
-            <p class="project-card__metric">&#10003; 35% reduction in downtime</p>
+            <h3 class="project-card__title">Ring Size Measurement System</h3>
+            <p class="project-card__metric">&#10003; 35% reduction in rework</p>
             <a href="#contact" class="project-card__link">
               View Details
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -342,12 +416,12 @@
         <!-- Project 3 -->
         <div class="project-card reveal reveal-delay-3">
           <div class="project-card__image">
-            <div class="project-card__image-inner project-card__image-inner--3"></div>
+            <div class="project-card__image-inner project-card__image-inner--3" style="background: url('PoC/Cashewnut.png') center/cover;"></div>
             <div class="project-card__image-gradient"></div>
             <span class="badge project-card__badge">AI/ML</span>
           </div>
           <div class="project-card__body">
-            <h3 class="project-card__title">AI-Powered Inventory Classification System</h3>
+            <h3 class="project-card__title">Cashew Nut Grading & Classification</h3>
             <p class="project-card__metric">&#10003; 4x faster processing</p>
             <a href="#contact" class="project-card__link">
               View Details
