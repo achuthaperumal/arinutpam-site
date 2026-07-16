@@ -885,6 +885,20 @@
   gap: var(--gap-sm);
 }
 
+.footer__legal {
+  display: flex;
+  gap: var(--gap-lg);
+}
+
+.footer__registration {
+  margin-top: var(--gap-md);
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+  text-align: center;
+  color: var(--text-secondary);
+  opacity: 0.85;
+}
+
 /* ===== THEME TOGGLE ===== */
 .theme-toggle {
   display: flex;
